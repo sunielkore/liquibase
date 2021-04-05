@@ -1,0 +1,18 @@
+spring:
+  liquibase:
+    change-log: /changelog/db.changelog-master.yaml
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    testWhileIdle: true
+    url: 'jdbc:oracle:thin:@//localhost:1521/ORA'
+    username: 'SYSTEM'
+    password: Bktpk3244a
+    validationQuery: SELECT 1
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+
+logging:
+  level:
+    liquibase: INFO
